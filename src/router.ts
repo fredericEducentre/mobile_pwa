@@ -30,6 +30,14 @@ export const router = new Router({
           lazy(() => import('./pages/app-about/app-about.js')),
         ],
         render: () => html`<app-about></app-about>`
+      },
+      {
+        path: resolveRouterPath('privacy'),
+        title: 'privacy',
+        plugins: [
+          lazy(() => import('./pages/app-privacy/app-privacy.js')),
+        ],
+        render: () => html`<app-privacy></app-privacy>`
       }
     ]
   });
